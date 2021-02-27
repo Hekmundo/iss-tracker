@@ -10,6 +10,7 @@ import {Icon, Style} from 'ol/style';
 import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer';
 import {fromLonLat} from 'ol/proj';
 
+
 const coordinates = [];
 const url = 'http://api.open-notify.org/iss-now.json';
 
