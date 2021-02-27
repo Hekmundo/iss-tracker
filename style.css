@@ -14,7 +14,7 @@ h1 {
   color: #c3cbd4;
   font-family: "Star", sans-serif;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 1;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -39,7 +39,7 @@ h1 {
 
 #map {
   height: 80%;
-  width: 80%;
+  width: 90%;
   background-color: #04041b;
   border: 3px solid black;
 }
