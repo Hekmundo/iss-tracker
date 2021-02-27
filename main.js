@@ -53,9 +53,13 @@ const getMap = () => {
 }
 
 const getData = async function ()  {
-  const response = await fetch(url);
-  const data = await response.json();
-  return data;
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+  } catch (err) {
+    console.log('Something went wrong', err);
+  }
 }
 
 const updateCoordinates = (data) => {
@@ -73,7 +77,6 @@ const updateMap = () => {
 
 // Initialise map then keep updating
 let map;
-
 getData().then((data) => {
   updateCoordinates(data);
   map = getMap();
