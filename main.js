@@ -10,7 +10,8 @@ import {Icon, Style} from 'ol/style';
 import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer';
 import {fromLonLat} from 'ol/proj';
 
-let coordinates = [0,0];
+const coordinates = [];
+const url = 'http://api.open-notify.org/iss-now.json';
 
 const getIcon = () => {
   const iconFeature = new Feature({
@@ -51,37 +52,37 @@ const getMap = () => {
   });
 }
 
-const initialize = () => {
-  fetch('http://api.open-notify.org/iss-now.json')
-    .then((response) => response.json())
-    .then((data) => {
-      const { iss_position : { latitude, longitude } } = data;
-      coordinates[0] = longitude 
-      coordinates[1] = latitude;
-      console.log(coordinates);
-      map = getMap();
-    })
+const getData = async function ()  {
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
+}
+
+const updateCoordinates = (data) => {
+  const { iss_position : { latitude, longitude } } = data;
+  coordinates[0] = longitude;
+  coordinates[1] = latitude;
 }
 
 const updateMap = () => {
-  setTimeout(() => {
-    fetch('http://api.open-notify.org/iss-now.json')
-    .then((response) => response.json())
-    .then((data) => {
-      const { iss_position : { latitude, longitude } } = data;
-      coordinates = [longitude, latitude];
-      console.log(coordinates);
-
-      const layers = map.getLayers().getArray();
-      layers.pop();
-      layers.push(getIcon());
-
-      map.render();
-      updateMap(); // re-run update
-    })
-  }, 5000)
+  const layers = map.getLayers().getArray();
+  layers.pop();
+  layers.push(getIcon());
+  map.render();
 }
 
+// Initialise map then keep updating
 let map;
-initialize();
-updateMap();
+
+getData().then((data) => {
+  updateCoordinates(data);
+  map = getMap();
+
+  // Update every 5 seconds
+  setInterval(() => {
+    getData().then((data) => {
+      updateCoordinates(data);
+      updateMap();
+    })
+  }, 5000)
+})
