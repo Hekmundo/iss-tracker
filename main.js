@@ -21,7 +21,7 @@ const getIcon = () => {
   }); 
   const iconStyle = new Style({
     image: new Icon({
-      src: 'img/iss.png',
+      src: 'images/iss.png',
     }),
   });
   iconFeature.setStyle(iconStyle);
@@ -37,7 +37,7 @@ const getBackground = () => {
   return new VectorLayer({
     source: new VectorSource({
       format: new GeoJSON(),
-      url: './data/countries.json'
+      url: 'data/countries.json'
     })
   });
 }
