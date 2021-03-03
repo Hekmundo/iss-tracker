@@ -1,2 +1,2 @@
 # space-station-tracker
-Web app tracking the ISS using the Open Notify API and mapped with OpenLayers 6
+Web app tracking the position of the ISS using Open Notify API (http://open-notify.org/) and mapping with OpenLayers 6
