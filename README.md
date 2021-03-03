@@ -1,2 +1,2 @@
 # space-station-tracker
-Web app tracking the position of the ISS using WHERE THE ISS AT? API (https://wheretheiss.at/) and mapping with OpenLayers 6
+Web app tracking the position of the ISS using 'Where the ISS at?' API (https://wheretheiss.at/) and visual mapping with OpenLayers 6
