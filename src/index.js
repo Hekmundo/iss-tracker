@@ -1,4 +1,4 @@
-import './style.css';
+import './style.scss';
 import IssImage from './assets/iss.png';
 
 import 'ol/ol.css';
