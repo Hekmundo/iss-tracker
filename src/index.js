@@ -16,9 +16,9 @@ const getData = async function () {
 let map;
 getData().then((data) => {
   updateCoordinates(data);
-  document.getElementById('map').style.display = 'block';
-  document.getElementById('header').style.display = 'block';
   map = getMap();
+  document.getElementById('header').style.display = 'block';
+  document.getElementById('map').style.border = '3px solid black;';
 
   // Update every 5 seconds
   setInterval(() => {
