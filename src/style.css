@@ -25,18 +25,23 @@ h1 {
   color: #c3cbd4;
   font-family: 'STARWARS', sans-serif;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 2.2rem;
   line-height: 1;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin: 0 1em 1em;
   text-shadow: 1px 1px 2px black;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   h1 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h1 {
+    font-size: 1.5rem;
   }
 }
 
