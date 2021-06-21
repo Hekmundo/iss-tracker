@@ -26,6 +26,7 @@ html {
 }
 
 #header {
+  display: none;
   position: relative;
   z-index: 3;
   color: #c3cbd4;
@@ -37,6 +38,10 @@ html {
   letter-spacing: 0.2em;
   margin: 0 1em 0.6em;
   text-shadow: 1px 1px 2px black;
+
+  @media screen and (min-height: 800px) {
+    margin-bottom: 1em;
+  }
 
   @media screen and (max-width: 768px) {
     font-size: 1.8rem;

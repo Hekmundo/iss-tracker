@@ -12,18 +12,12 @@ const getData = async function () {
   }
 };
 
-const addHeaderText = () => {
-  const text = document.createTextNode('REAL-TIME ISS LOCATION');
-  const header = document.getElementById('header');
-  header.appendChild(text);
-};
-
 // Initialise map then keep updating
 let map;
 getData().then((data) => {
   updateCoordinates(data);
   map = getMap();
-  addHeaderText();
+  document.getElementById('header').style.display = 'block';
 
   // Update every 5 seconds
   setInterval(() => {
