@@ -22,7 +22,6 @@ const addHeaderText = () => {
 let map;
 getData().then((data) => {
   updateCoordinates(data);
-  document.getElementById('map').style.display = 'block';
   map = getMap();
   addHeaderText();
 
