@@ -18,7 +18,10 @@ getData().then((data) => {
   updateCoordinates(data);
   map = getMap();
   document.getElementById('header').style.display = 'block';
-  document.getElementById('map').style.border = '3px solid black;';
+  setTimeout(() => {
+    document.getElementById('map').style.border = '3px solid black';
+    document.getElementById('clouds').style.display = 'none';
+  }, 1000);
 
   // Update every 5 seconds
   setInterval(() => {
