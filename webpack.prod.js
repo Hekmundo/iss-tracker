@@ -16,7 +16,7 @@ module.exports = merge(common, {
     minimizer: [
       new CssMinimizerPlugin(),
       new HtmlWebpackPlugin({
-        template: './src/template.html',
+        template: './src/index.html',
         minify: {
           removeAttributeQuotes: true,
           collapseWhitespace: true,
@@ -39,6 +39,13 @@ module.exports = merge(common, {
           MiniCssExtractPlugin.loader, //2. Extract css into files
           'css-loader', //1. Turns css into commonjs
         ],
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        },
       },
     ],
   },
