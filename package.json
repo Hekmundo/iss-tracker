@@ -1,5 +1,5 @@
 {
-  "name": "iss-tracker-new",
+  "name": "iss-tracker",
   "version": "1.0.0",
   "description": "Web app tracking the ISS using the Open Notify API and mapped with OpenLayers 6",
   "private": true,
