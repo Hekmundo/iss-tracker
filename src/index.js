@@ -14,10 +14,11 @@ const getData = async function () {
 
 // Initialise map then keep updating
 let map;
+document.getElementById('header').style.display = 'block';
 getData().then((data) => {
   updateCoordinates(data);
+  document.getElementById('map').style.display = 'block';
   map = getMap();
-  document.getElementById('header').style.display = 'block';
 
   // Update every 5 seconds
   setInterval(() => {
