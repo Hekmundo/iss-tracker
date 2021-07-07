@@ -19,7 +19,7 @@ getData().then((data) => {
   map = getMap();
   document.getElementById('header').style.display = 'block';
   setTimeout(() => {
-    document.getElementById('map').style.border = '3px solid black';
+    document.getElementById('map').style.border = '3px black solid';
     document.getElementById('clouds').style.display = 'none';
   }, 1000);
 
