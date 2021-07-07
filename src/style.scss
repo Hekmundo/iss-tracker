@@ -17,6 +17,7 @@ html {
 #header {
   display: none;
   position: relative;
+  top: -1000px;
   z-index: 3;
   color: #c3cbd4;
   font-family: 'STARWARS', sans-serif;
@@ -27,6 +28,15 @@ html {
   letter-spacing: 0.2em;
   margin: 0 1em 0.6em;
   text-shadow: 1px 1px 2px black;
+
+  animation: slide 0.5s forwards;
+  animation-delay: 0.5s;
+
+  @keyframes slide {
+    100% {
+      top: 0;
+    }
+  }
 
   @media screen and (min-height: 800px) {
     margin-bottom: 1em;
@@ -46,10 +56,23 @@ html {
 
 #map {
   position: relative;
+  bottom: -1000px;
   z-index: 3;
   height: 80%;
   width: 90%;
   border: none;
+
+  animation: map-slide 0.5s forwards;
+  animation-delay: 0.5s;
+
+  @keyframes map-slide {
+    // 50% {
+    //   bottom: -70px;
+    // }
+    100% {
+      bottom: 0;
+    }
+  }
 }
 
 .stars,
