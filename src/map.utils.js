@@ -58,7 +58,7 @@ export const getMap = () => {
     target: 'map',
     view: new View({
       center: fromLonLat(coordinates),
-      zoom: 3,
+      zoom: 2,
     }),
   });
 };
