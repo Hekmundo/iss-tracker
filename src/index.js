@@ -18,12 +18,11 @@ getData().then((data) => {
   updateCoordinates(data);
   map = getMap();
   map.once('postrender', () => {
-    console.log('I am finished rendering');
     document.getElementById('header').style.display = 'block';
     setTimeout(() => {
       document.getElementById('map').style.border = '3px black solid';
       document.getElementById('clouds').style.display = 'none';
-    }, 5000);
+    }, 2000);
   });
 
   // Update every 5 seconds

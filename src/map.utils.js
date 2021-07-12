@@ -46,7 +46,7 @@ const getLabels = () => {
 const getMapBackground = () => {
   return new TileLayer({
     source: new XYZ({
-      url: 'https://api.maptiler.com/tiles/satellite/{z}/{x}/{y}.jpg?key=m6j393S1kCtixGAioJhX',
+      url: 'https://api.maptiler.com/tiles/satellite-mediumres/{z}/{x}/{y}.jpg?key=m6j393S1kCtixGAioJhX',
       maxZoom: 20,
     }),
   });

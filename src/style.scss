@@ -36,7 +36,7 @@ html {
   opacity: 0;
 
   animation: slide 1s forwards ease;
-  animation-delay: 5s;
+  animation-delay: 2s;
 
   @keyframes slide {
     100% {
@@ -72,7 +72,7 @@ html {
   opacity: 0;
 
   animation: map-slide 1s forwards ease;
-  animation-delay: 5s;
+  animation-delay: 2s;
 
   @keyframes map-slide {
     100% {
