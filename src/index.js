@@ -23,7 +23,7 @@ getData().then((data) => {
     setTimeout(() => {
       document.getElementById('map').style.border = '3px black solid';
       document.getElementById('clouds').style.display = 'none';
-    }, 2000);
+    }, 5000);
   });
 
   // Update every 5 seconds
