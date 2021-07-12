@@ -22,7 +22,7 @@ html {
 #header {
   display: none;
   position: relative;
-  top: -1000px;
+  top: -20px;
   z-index: 3;
   color: #c3cbd4;
   font-family: 'starwars', sans-serif;
@@ -33,13 +33,15 @@ html {
   letter-spacing: 0.2em;
   margin: 0 1em 0.6em;
   text-shadow: 1px 1px 2px black;
+  opacity: 0;
 
-  animation: slide 0.5s forwards;
-  animation-delay: 1s;
+  animation: slide 1s forwards ease;
+  animation-delay: 2s;
 
   @keyframes slide {
     100% {
       top: 0;
+      opacity: 1;
     }
   }
 
@@ -61,18 +63,21 @@ html {
 
 #map {
   position: relative;
-  bottom: -1000px;
+  bottom: -50px;
   z-index: 3;
   height: 80%;
   width: 90%;
   border: none;
+  background-color: black;
+  opacity: 0;
 
-  animation: map-slide 0.5s forwards;
-  animation-delay: 1s;
+  animation: map-slide 1s forwards ease;
+  animation-delay: 2s;
 
   @keyframes map-slide {
     100% {
       bottom: 0;
+      opacity: 1;
     }
   }
 }
