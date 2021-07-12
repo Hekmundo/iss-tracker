@@ -1,5 +1,5 @@
 import { updateMap, getMap, updateCoordinates } from './map.utils';
-import './service-worker';
+import './service-worker-registration';
 
 const getData = async function () {
   try {
